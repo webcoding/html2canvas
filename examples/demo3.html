@@ -25,7 +25,7 @@
   <link rel="stylesheet" href="assets/app_mob.css" />
 </head>
 <body class="is_in_app">
-  <div id="root"><div class="viewport-wrapper"><div class="view page-view-join_talent" id="ui-view-7" page-url="join_talent" style="display: block;"><div class="js_shadow_root">
+  <div id="root"><div class="viewport-wrapper"><div class="view page-view-join_talent" style="max-width:750px;" id="ui-view-7" page-url="join_talent" style="display: block;"><div class="js_shadow_root">
 <div class="page-join-talent app_box">
   <div class="title">
     <p class="text-ell"><span class="name">晓寒</span> 专属二维码</p>
@@ -40,7 +40,11 @@
       </div>
     </div>
     <div class="join-info"><div class="text-ell">加入我们，赚更多奖励！</div>
-      <!-- 使用 html2canvas 不能有 svg 元素; 且大背景如果小于页面宽度，生成的canvas 不会缩放图片 -->
+      <i class="join_icon join_icon_l"></i>
+      <i class="join_icon join_icon_r"></i>
+      <!-- 使用 html2canvas 不能有 svg 元素(改为普通标签实现); -->
+      <!-- 圆角实现未顺利转化成 canvas,见示例 -->
+      <!-- 且大背景如果小于页面宽度，生成的canvas 不会缩放图片(可设置最大宽度) -->
       <!-- <svg class="join_icon join_icon_l" width="40px" height="40px"><polygon points="0,0 8,20 0,40 40,40 40,0 " style="fill:#252525;"></polygon></svg>
       <svg class="join_icon join_icon_r" width="40px" height="40px"><polygon points="0,0 0,40 40,40 32,20 40,0 " style="fill:#252525;"></polygon></svg> -->
       </div>
