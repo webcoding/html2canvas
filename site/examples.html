@@ -14,6 +14,7 @@ html2canvas(document.body, {
   }
 });</pre>
   <p><button class="btn example1">Test on this page</button></p>
+  <div id="box1" class="box" style="border:1px solid red;  width：100px; min-height: 20px;">生成截图</div>
 
   <p class="lead">
     Rendering the body element and restrict canvas size to 300x300px
@@ -28,19 +29,22 @@ html2canvas(document.body, {
   height: 300
 });</pre>
   <p><button class="btn example2">Test on this page</button></p>
+  <div id="box2" class="box" style="border:1px solid red;  width：100px; min-height: 20px;">生成截图</div>
 
-
-  <script src="/build/html2canvas.js"></script>
+  <script src="build/html2canvas.js"></script>
   <script src="site/js/prettify.js"></script>
   <script>
     window.prettyPrint();
+    var $box1 = $('#box1');
+    var $box2 = $('#box2');
     $(".example1").on("click", function(event) {
       event.preventDefault();
       html2canvas(document.body, {
         allowTaint: true,
         taintTest: false,
         onrendered: function(canvas) {
-          document.body.appendChild(canvas);
+          $box1.html(canvas);
+          // document.body.appendChild(canvas);
         }
       });
     });
@@ -51,7 +55,8 @@ html2canvas(document.body, {
         allowTaint: true,
         taintTest: false,
         onrendered: function(canvas) {
-          document.body.appendChild(canvas);
+          // document.body.appendChild(canvas);
+          $box2.html(canvas);
         },
         width: 300,
         height: 300

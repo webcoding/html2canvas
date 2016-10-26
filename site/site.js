@@ -1,39 +1,41 @@
 (function() {
   var app = angular.module('site', []);
 
+  var path = location.pathname;
+
   app.config(function($routeProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
 
     $routeProvider.
-    when('/', {
+    when(path, {
       templateUrl:'site/index.html',
       title: 'html2canvas - Screenshots with JavaScript'
     }).
-    when('/screenshots.html', {
+    when(path + 'screenshots.html', {
       templateUrl:'site/screenshots.html',
       title: 'Test console'
     }).
-    when('/screenshots_beta.html', {
+    when(path + 'screenshots_beta.html', {
         templateUrl:'site/screenshots_beta.html',
         title: 'Test console'
     }).
-    when('/examples.html', {
+    when(path + 'examples.html', {
       templateUrl:'site/examples.html',
       title: 'Examples for html2canvas'
     }).
-    when('/faq.html', {
+    when(path + 'faq.html', {
       templateUrl:'site/faq.html',
       title: "FAQ"
     }).
-    when('/documentation.html', {
+    when(path + 'documentation.html', {
       templateUrl:'site/documentation.html',
       title: 'Documentation for html2canvas'
     }).
-    when('/LICENSE', {
+    when(path + 'LICENSE', {
       templateUrl:'/LICENSE'
     }).
     otherwise({
-      redirectTo:'/'
+      redirectTo: path
     });
   });
 
