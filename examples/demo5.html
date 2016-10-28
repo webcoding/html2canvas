@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>好食期精选</title>
+  <meta name="description" content="好食期是一个专门做食品特卖的电商平台">
+  <!-- UC默认竖屏 ，UC强制全屏 -->
+  <meta name="full-screen" content="yes"/>
+  <meta name="browsermode" content="application"/>
+  <!-- QQ强制竖屏 QQ强制全屏 -->
+  <meta name="x5-orientation" content="portrait"/>
+  <meta name="x5-fullscreen" content="true"/>
+  <meta name="x5-page-mode" content="app"/>
+  <!--IOS 设备 删除默认的苹果工具栏和菜单栏，yes 代表以全屏模式运行-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <!--顶部栏样式，默认值为default（白色），可以定为black（黑色）和black-translucent（灰色半透明）-->
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/> -->
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="assets/dwd_h5.css" />
+  <link rel="stylesheet" href="assets/app_mob.css" />
+</head>
+<body class="is_in_app">
+  <div id="root"><div class="viewport-wrapper"><div class="view page-view-join_talent" style="max-width:750px;" id="ui-view-7" page-url="join_talent" style="display: block;"><div class="js_shadow_root">
+<div class="page-join-talent app_box">
+  <div class="title">
+    <p class="text-ell"><span class="name">晓寒</span> 专属二维码</p>
+    <p>长按二维码保存图片 分享此图赚取奖励</p>
+  </div>
+  <div class="join-box">
+    <div class="user flex-user">
+      <div class="img"><img class="lazy" src="assets/avatar.png" alt=""></div>
+      <div class="text">
+        <p class="text-ell">我是 <b>晓寒</b></p>
+        <p class="text-ell">我是 <b>好食期精选</b> 达人</p>
+      </div>
+    </div>
+    <div class="join-info"><div class="text-ell">加入我们，赚更多奖励！</div>
+      <i class="join_icon join_icon_l"></i>
+      <i class="join_icon join_icon_r"></i>
+      <!-- 使用 html2canvas 不能有 svg 元素(改为普通标签实现); -->
+      <!-- 圆角实现未顺利转化成 canvas,见示例 -->
+      <!-- 且大背景如果小于页面宽度，生成的canvas 不会缩放图片(可设置最大宽度) -->
+      <!-- <svg class="join_icon join_icon_l" width="40px" height="40px"><polygon points="0,0 8,20 0,40 40,40 40,0 " style="fill:#252525;"></polygon></svg>
+      <svg class="join_icon join_icon_r" width="40px" height="40px"><polygon points="0,0 0,40 40,40 32,20 40,0 " style="fill:#252525;"></polygon></svg> -->
+      </div>
+    <div class="qrcode"><img src="data:image/gif;base64,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" alt=""></div>
+    <p class="info">长按此图 识别图中二维码</p>
+
+    <div class="t-logo"><img src="assets/logo2.png" width="64" height="21" alt=""> <b>精选</b></div>
+  </div>
+  </div>
+</div></div></div></div>
+<script type="text/javascript" src="../dist/html2canvas.js"></script>
+<script type="text/javascript">
+var domRoot = document.getElementById('root');
+var domPage = document.querySelector('.page-view-join_talent');
+var domTitle = domPage.querySelector('.title');
+// domPage.style.display = 'none';
+// domPage.style.display = 'none';
+domPage.style.position = 'relative';
+
+domTitle.style.position = 'relative';
+domTitle.style.zIndex = '1000';
+domTitle.style.opacity = '0';
+html2canvas(document.body, {
+  onrendered: function(canvas) {
+    var imgSrc = canvas.toDataURL();
+    var img = document.createElement('img');
+    img.src = imgSrc;
+    img.style.position = 'absolute';
+    img.style.top = '0';
+    img.style.left = '0';
+    img.style.zIndex = '100';
+    img.style.width = '100%';
+    img.style.height = '100%';
+    domPage.appendChild(img);
+    domTitle.style.opacity = '1';
+    // domTitle.style.display = 'block';
+
+    // document.body.appendChild(canvas);
+    // domRoot.style.display = 'none';
+  }
+});
+</script>
+</body>
+</html>
